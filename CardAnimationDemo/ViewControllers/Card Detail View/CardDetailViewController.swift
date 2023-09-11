@@ -196,7 +196,7 @@ class CardDetailViewController: UIViewController {
             
             self.downloadCancelButton.alpha = 1
             self.downloadViewWidthContraint.constant = self.screeSize.width - 95
-            self.downloadView.layoutIfNeeded()
+            self.view.layoutIfNeeded()
         } completion: { [weak self] flag in
             guard let self = self else { return }
             self.progressView.isHidden = false
