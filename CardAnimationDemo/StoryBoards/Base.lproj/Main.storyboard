@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="AnimationDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJf-Yv-ADR">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW9-tr-Pkr">
+                                        <rect key="frame" x="178.33333333333334" y="10" width="36.666666666666657" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fwc-km-3fN">
+                                        <rect key="frame" x="30" y="43" width="333" height="716"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="rUQ-6c-egd"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="FC1-va-hsX"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="fwc-km-3fN" firstAttribute="leading" secondItem="jJf-Yv-ADR" secondAttribute="leading" constant="30" id="EIS-Bp-NAq"/>
+                                    <constraint firstAttribute="bottom" secondItem="fwc-km-3fN" secondAttribute="bottom" id="HEZ-xy-tqy"/>
+                                    <constraint firstItem="sW9-tr-Pkr" firstAttribute="top" secondItem="jJf-Yv-ADR" secondAttribute="top" constant="10" id="KEW-ev-qxz"/>
+                                    <constraint firstItem="fwc-km-3fN" firstAttribute="top" secondItem="sW9-tr-Pkr" secondAttribute="bottom" constant="10" id="Wdi-Mu-LpX"/>
+                                    <constraint firstItem="sW9-tr-Pkr" firstAttribute="centerX" secondItem="jJf-Yv-ADR" secondAttribute="centerX" id="aTf-21-1vX"/>
+                                    <constraint firstAttribute="trailing" secondItem="fwc-km-3fN" secondAttribute="trailing" constant="30" id="gTc-TM-IPE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jJf-Yv-ADR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="56w-Hg-gGD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jJf-Yv-ADR" secondAttribute="trailing" id="7GI-JG-wPL"/>
+                            <constraint firstItem="jJf-Yv-ADR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="daK-my-gs0"/>
+                            <constraint firstItem="jJf-Yv-ADR" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zpY-Xf-ibZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardsTableView" destination="fwc-km-3fN" id="Vs1-EI-z3H"/>
+                        <outlet property="titleLabel" destination="sW9-tr-Pkr" id="Rlf-rj-UDK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.564885496183201" y="0.70422535211267612"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

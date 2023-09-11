@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CardViewTableViewCell" rowHeight="286" id="KGk-i7-Jjw" customClass="CardViewTableViewCell" customModule="AnimationDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="583" height="286"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="583" height="286"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rD3-CR-G9U" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="10" width="583" height="256"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVo-67-sHX">
+                                <rect key="frame" x="20" y="30" width="100" height="100"/>
+                                <color key="backgroundColor" name="yellow_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MAt-Ff-8Xc"/>
+                                    <constraint firstAttribute="height" constant="100" id="hsh-rO-lD3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGK-uY-k8l">
+                                <rect key="frame" x="20" y="176" width="543" height="60"/>
+                                <color key="backgroundColor" name="green_color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="ENc-0C-2xv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="orange_color"/>
+                        <constraints>
+                            <constraint firstItem="DGK-uY-k8l" firstAttribute="leading" secondItem="rD3-CR-G9U" secondAttribute="leading" constant="20" id="3aS-eN-iHy"/>
+                            <constraint firstAttribute="bottom" secondItem="DGK-uY-k8l" secondAttribute="bottom" constant="20" id="LUE-gr-eHA"/>
+                            <constraint firstItem="jVo-67-sHX" firstAttribute="leading" secondItem="rD3-CR-G9U" secondAttribute="leading" constant="20" id="MEz-mn-l7e"/>
+                            <constraint firstAttribute="trailing" secondItem="DGK-uY-k8l" secondAttribute="trailing" constant="20" id="ZAE-SG-tXA"/>
+                            <constraint firstItem="jVo-67-sHX" firstAttribute="top" secondItem="rD3-CR-G9U" secondAttribute="top" constant="30" id="pMA-hj-Ab7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="rD3-CR-G9U" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6ZH-yc-PDi"/>
+                    <constraint firstAttribute="bottom" secondItem="rD3-CR-G9U" secondAttribute="bottom" constant="20" id="f0y-3Q-sGI"/>
+                    <constraint firstAttribute="trailing" secondItem="rD3-CR-G9U" secondAttribute="trailing" id="ijo-ed-fQ4"/>
+                    <constraint firstItem="rD3-CR-G9U" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ugp-KG-wRo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="downloadView" destination="DGK-uY-k8l" id="Qb9-sa-lmR"/>
+                <outlet property="mainView" destination="rD3-CR-G9U" id="Vpp-AC-RNQ"/>
+                <outlet property="topView" destination="jVo-67-sHX" id="xEb-0T-bIR"/>
+            </connections>
+            <point key="canvasLocation" x="124.42748091603053" y="104.92957746478874"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="green_color">
+            <color red="0.4324330617849973" green="0.74846050481206361" blue="0.19649529451219053" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="orange_color">
+            <color red="1" green="0.6263513381217175" blue="0.34750942946531538" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="yellow_color">
+            <color red="1" green="0.84599692978390995" blue="0.33445891348370527" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
